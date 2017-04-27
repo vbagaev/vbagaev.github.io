@@ -1,0 +1,30 @@
+---
+layout: default
+title: Блог-note. Багаев Валерий - верстка сайтов, разработка на Javascript. Персональный сайт.
+---
+
+                        <h1 class="title">
+                            Блог-note
+                        </h1>
+                        <ul class="blog">
+                            {% for post in site.posts %}
+                            <li class="blog-item">
+                                <h2 class="blog-item__title"><a href="{{ post.url }}" class="blog-item__title-a">{{ post.title }}</a></h2>
+                                <div class="blog-item__content">
+                                {{ post.excerpt }}
+                                </div>
+                                <div class="blog-item__labels">
+                                    <div class="blog-item__time blog-item__time_clock-o">
+                                        <span class="blog-item__timeline">
+                                               {{ post.date | date: '%B %d, %Y' }}
+                                        </span>
+                                    </div>    
+                                    <div class="blog-item__сategories blog-item__сategories_tags">
+                                        <span class="blog-item__сategories-text">
+                                            {{ post.tags }}
+                                        </span>
+                                    </div>                                
+                                </div>                                
+                            </li>
+                            {% endfor %}
+                        </ul>                      

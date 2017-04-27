@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+                        <div class="blog-item blog-item_details">
+                            <h2 class="blog-item__title blog-item__title_details">{{ page.title }}</h2>
+                            <div class="blog-item__labels">
+                                <div class="blog-item__time blog-item__time_clock-o">
+                                    <span class="blog-item__timeline">
+                                            {{ page.date | date: '%B %d, %Y' }}
+                                    </span>
+                                </div>    
+                                <div class="blog-item__сategories blog-item__сategories_tags">
+                                    <span class="blog-item__сategories-text">
+                                        {{ page.tags }}
+                                    </span>
+                                </div>                                
+                            </div>
+
+                            <div class="blog-item__content blog-item__content_details">
+                                {{ content }}
+                            </div>
+                        </div>
